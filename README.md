@@ -1,139 +1,136 @@
-# Predictive Medical Costs: A Data Analysis and Machine Learning Approach
+# Predictive Medical Costs: A Data Analysis and Machine Learning Approach  
 
-## Ask: Problem Statement
-Healthcare costs are a significant concern for individuals and health insurance companies. This project aims to predict medical costs based on demographic and medical factors such as age, sex, BMI, smoking status, and region. By leveraging machine learning techniques, the goal is to develop a model that predicts medical expenses for individuals.
-
-- **Target Variable**: `charges` (Medical cost in USD)
-- **Objective**: Build a regression model to predict medical charges based on individual features.
+This case study explores a data-driven approach to predicting medical costs using demographic, lifestyle, and derived factors such as BMI category, age group, smoker status, family size, risk group, and cost ranges. Using the **Medical Cost Dataset** from Kaggle, the project involved data cleaning, feature engineering, exploratory analysis, and building machine learning models—specifically Linear Regression and Random Forest—to forecast medical expenses. The analysis highlights key cost drivers such as smoking, BMI, and risk group, emphasizing preventive healthcare's role in reducing expenses. This work demonstrates how predictive modeling can provide actionable insights to address healthcare cost challenges effectively.
 
 ---
 
-## Prepare: Dataset & Understanding the Data
-The dataset used for this project is the [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset), which includes demographic and medical information about individuals:
+## Table of Contents  
 
-### Features:
-- **Age**: Age of the individual
-- **Sex**: Gender of the individual
-- **BMI**: Body Mass Index
-- **Children**: Number of children/dependents
-- **Smoker**: Whether the individual is a smoker (`Yes`/`No`)
-- **Region**: Geographical region (e.g., Southeast, Southwest, etc.)
-
-### Target Variable:
-- **charges**: The medical expenses in USD that an individual incurs.
+1. [**Ask: Problem Statement**](#1-ask-problem-statement)  
+2. [**Prepare: Dataset & Understanding the Data**](#2-prepare-dataset--understanding-the-data)  
+3. [**Process: Data Cleaning & Preprocessing**](#3-process-data-cleaning--preprocessing)  
+4. [**Analyze: Exploratory Data Analysis (EDA)**](#4-analyze-exploratory-data-analysis-eda)  
+5. [**Model: Predicting Medical Charges with Regression**](#5-model-predicting-medical-charges-with-regression)  
+6. [**Share: Interactive Dashboard & Visualization**](#6-share-interactive-dashboard--visualization)  
+7. [**Act: Insights and Future Improvements**](#7-act-insights-and-future-improvements)  
+8. [**Project Resources**](#8-project-resources)  
 
 ---
 
-## Process: Data Cleaning & Preprocessing
-To prepare the data for analysis, several preprocessing steps were performed:
+## 1. Ask: Problem Statement  
 
-- **Data Cleaning**: Removed irrelevant or duplicate columns and handled missing values.
-- **Feature Engineering**: Converted categorical features (e.g., `sex`, `smoker`, `region`) into numerical values and checked correlations between features and medical charges.
-- **Feature Scaling**: Standardized numerical features such as `age` and `BMI` to improve model performance.
-- **Data Splitting**: Split the dataset into **training (80%)** and **testing (20%)** sets for model evaluation.
+Healthcare costs are a significant concern for individuals and insurance companies. This project aims to predict medical costs based on demographic, lifestyle, and derived factors such as age, BMI, smoking status, and new categorical features. By leveraging machine learning techniques, the goal is to develop a model that predicts medical expenses for individuals.  
 
----
-
-## Analyze: Exploratory Data Analysis (EDA)
-Exploratory analysis was performed to uncover insights and relationships between features:
-
-## Objectives
-
-- Perform exploratory data analysis (EDA) to understand the data.
-- Train and evaluate multiple machine learning models (Linear Regression, Random Forest) for medical cost prediction.
-- Evaluate model performance using metrics such as accuracy, RMSE, and AUC-ROC.
-- Visualize the results of the analysis and model performance.
-
-## Dataset Description
-
-The dataset contains the following features:
-
-- `Age`: The age of the individual.
-- `BMI`: The body mass index of the individual.
-- `Smoker`: Whether the individual is a smoker (binary: yes/no).
-- `Region`: The geographic region where the individual resides.
-- `Risk_group`: A classification based on individual risk factors.
-- `Charges`: Medical charges incurred by the individual.
-
-## Steps
-
-### 1. **Exploratory Data Analysis (EDA)**
-
-Performed EDA to:
-- Understand the distribution of features.
-- Check for missing values and outliers.
-- Visualize the relationships between features and the target variable (`Charges`).
-
-Key libraries used: `ggplot2`, `dplyr`, `tidyr`
-
-### 2. **Modeling**
-
-Trained two models:
-- **Linear Regression**: A simple linear regression model to predict medical charges.
-- **Random Forest**: A Random Forest model to predict high medical costs.
-
-### 3. **Model Evaluation**
-
-Evaluated models based on:
-- RMSE (Root Mean Squared Error) for the regression model.
-- Accuracy, Precision, Recall, F1-Score, and AUC-ROC for the classification model.
-
-### 4. **Visualizations**
-
-- **Feature Importance**: Visualized the importance of different features in predicting medical costs using a bar chart.
-- **ROC Curve**: Generated an ROC curve to evaluate the classification model.
-- **Model Performance**: Compared the performance of different models (Linear Regression vs. Random Forest).
-
-## Requirements
-
-To run the code, you need to have the following libraries installed:
-
-- `randomForest`
-- `ggplot2`
-- `dplyr`
-- `caret`
-- `ROCR`
-
-You can install these libraries in R with the following command:
-
-install.packages(c("randomForest", "ggplot2", "dplyr", "caret", "ROCR"))
+- **Target Variable**: `charges` (Medical cost in USD)  
+- **Objective**: Build a regression model to predict medical charges based on individual features and engineered categories.  
 
 ---
 
-## Model: Predicting Medical Charges with Regression
-A regression model was built to predict medical costs based on the identified features.
+## 2. Prepare: Dataset & Understanding the Data  
 
-### Evaluation Metrics:
-- **Mean Squared Error (MSE)**: 1,245,678
-- **R-squared**: 0.85 (indicating a strong model performance)
+The dataset used for this project is the [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset), which includes demographic and medical information about individuals.  
 
-These results demonstrate that the regression model can accurately predict medical charges for individuals.
+### Features:  
+- **Age**: Age of the individual  
+- **Sex**: Gender of the individual  
+- **BMI**: Body Mass Index  
+- **Children**: Number of children/dependents  
+- **Smoker_binary**: Encoded smoker status into `0` (Non-smoker) and `1` (Smoker).
+- **Region**: Geographical region (e.g., Southeast, Southwest, etc.)  
 
----
+### Derived Features:  
+1. **BMI_category**: Categorized BMI into `Underweight`, `Normal`, `Overweight`, and `Obese`.  
+2. **Age_category**: Grouped ages into categories such as `Young`, `Middle-aged`, and `Senior`.  
+3. **Smoker**: Whether the individual is a smoker (`Yes`/`No`)   
+4. **Family_size**: Derived from the `children` column into categories like `No children` and `Large family`.  
+5. **Risk_group**: Categorized individuals into `Low-risk`, `Medium-risk`, and `High-risk` based on smoking and BMI.  
+6. **Cost_ranges**: Grouped medical charges into ranges such as `Low`, `Medium`, and `High`.  
 
-## Share: Interactive Dashboard & Visualization
-This section will be updated soon with an interactive Tableau dashboard showcasing:
-- Predictions and model evaluation metrics.
-- Key feature importance (e.g., age, BMI, smoker status).
-- Interactive exploration of medical cost trends based on individual data.
-
----
-
-## Act: Insights and Future Improvements
-The analysis and machine learning model provide important insights:
-
-### Key Insights:
-1. **Smoking** significantly increases medical costs, emphasizing the importance of smoking cessation programs.
-2. **BMI** is another strong predictor of higher medical expenses.
-
-### Future Directions:
-1. **Feature Expansion**: Adding more medical or lifestyle data could improve prediction accuracy.
-2. **Model Improvement**: Trying different algorithms, such as **Random Forest** or **XGBoost**, could further refine the model’s predictions.
+### Target Variable:  
+- **charges**: The medical expenses in USD that an individual incurs.  
 
 ---
 
-## Project Resources
-- **Dataset**: [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset)
-- **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)
-- **Full Documentation**: *(add GitHub Repository link here when available)*
+## 3. Process: Data Cleaning & Preprocessing  
 
+To prepare the data for analysis, several preprocessing steps were performed:  
+
+1. **Data Cleaning**: Removed irrelevant or duplicate columns and handled missing values.  
+2. **Feature Engineering**:  
+   - Derived new features like `BMI_category`, `Age_category`, and `Risk_group`.  
+   - Converted categorical features (`sex`, `smoker`, `region`) and derived features into numerical values.  
+   - Checked correlations between features and medical charges.  
+3. **Feature Scaling**: Standardized numerical features such as `age` and `BMI` to improve model performance.  
+4. **Data Splitting**: Divided the dataset into **training (80%)** and **testing (20%)** sets for model evaluation.  
+
+---
+
+## 4. Analyze: Exploratory Data Analysis (EDA)  
+
+Exploratory analysis was performed to uncover insights and relationships between original and derived features.  
+
+### Objectives:  
+- Understand data distribution and relationships.  
+- Identify significant predictors of medical costs.  
+- Visualize the data using histograms, scatterplots, bar charts, and correlation heatmaps.  
+
+Key Findings from EDA:  
+1. Smokers incur **significantly higher medical costs** than non-smokers.  
+2. Individuals categorized as **Obese** have higher average costs than those in lower BMI categories.  
+3. **High-risk groups**, as defined by the risk group feature, represent the highest average medical charges.  
+
+Key Libraries: `ggplot2`, `dplyr`, `tidyr`.  
+
+---
+
+## 5. Model: Predicting Medical Charges with Regression  
+
+Two models were trained to predict medical costs based on the identified features:  
+
+### Models Trained:  
+1. **Linear Regression**:  
+   - **RMSE**: 5521.50  
+   - **MAE**: 3742.80  
+   - **R-squared**: 0.761  
+
+2. **Random Forest**:  
+   - **RMSE**: 5514.34  
+   - **MAE**: 3944.00  
+   - **R-squared**: 0.754  
+
+### Key Takeaways:  
+- Both models performed comparably, with **Linear Regression** slightly outperforming Random Forest in R-squared.  
+- **Smoker_binary**, **BMI_category**, and **Risk_group** were identified as the most significant predictors of higher medical costs.  
+
+---
+
+## 6. Share: Interactive Dashboard & Visualization  
+
+An interactive **Tableau Dashboard** is under development to showcase:  
+- Predictions and model evaluation metrics.  
+- Key feature importance, including derived categories like `Risk_group` and `BMI_category`.  
+- Interactive exploration of medical cost trends based on user-selected features.  
+
+---
+
+## 7. Act: Insights and Future Improvements  
+
+### Key Insights:  
+1. **Smoking** remains a major driver of medical costs, highlighting the need for smoking cessation programs.  
+2. Individuals in **High-risk groups** consistently have higher average charges, emphasizing the need for targeted interventions.  
+3. Using categorical features like `BMI_category` and `Risk_group` simplifies understanding of medical cost patterns.  
+
+### Future Directions:  
+1. **Feature Expansion**: Including additional demographic or medical data for improved accuracy.  
+2. **Model Improvement**:  
+   - Experiment with advanced algorithms like **XGBoost** or **Neural Networks**.  
+   - Optimize existing models using hyperparameter tuning.  
+3. **Dashboard Refinement**: Enhance visualizations to improve user interaction and insights delivery.  
+
+---
+
+## 8. Project Resources  
+
+- **Dataset**: [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset)  
+- **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)  
+- **Full Documentation**: *(GitHub Repository link to be added)*  
