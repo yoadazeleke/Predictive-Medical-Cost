@@ -73,6 +73,10 @@ Model Improvement: Trying different algorithms, such as Random Forest or XGBoost
 
 ## Project Resources
 Dataset: Medical Cost Dataset on Kaggle
+https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset 
 Cleaned Data: Google Sheets Link
+https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing
+
 Full Documentation: GitHub Repository (add link when available)
+
 
