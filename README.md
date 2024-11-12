@@ -129,10 +129,9 @@ Explore advanced feature engineering techniques, such as feature interaction and
 3. **Dashboard Refinement**: Enhance visualizations to improve user interaction and insights delivery.
 
 ---
-
 ## 8. Project Resources  
 
 - **Dataset**: [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset)  
 - **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)
-- **Tableau Dashboard**: [Interactive Tableau Dashboard] (https://public.tableau.com/views/PredictiveMedicalCost/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-- **Full Documentation**: *(GitHub Repository link to be added)*  
+- **Tableau Dashboard**: [Interactive Tableau Dashboard](https://public.tableau.com/views/PredictiveMedicalCost/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+- **Full Documentation**: *GitHub Repository link to be added* 
