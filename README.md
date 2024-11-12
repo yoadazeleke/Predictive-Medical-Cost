@@ -80,11 +80,6 @@ Key Findings from EDA:
 3. **High-risk groups**, as defined by the risk group feature, represent the highest average medical charges.  
 
 Key Libraries: `ggplot2`, `dplyr`, `tidyr`.  
-![age_distribution](https://github.com/user-attachments/assets/b71fd285-d8ea-4775-9733-e906ad4594f0)
-![bmi_vs_charges](https://github.com/user-attachments/assets/2579398a-ab8e-4246-87f7-9d8fa16f5a52)
-![region_distribution](https://github.com/user-attachments/assets/86e667c2-a1fb-4914-aa56-7617791a6e9e)
-![risk_group_distribution](https://github.com/user-attachments/assets/24c738f9-4473-42be-b693-6a239f90ab22)
-![smoker_vs_charges](https://github.com/user-attachments/assets/fc67da34-69b4-4fbd-9af1-7bb4225dfa31)
 
 ---
 
