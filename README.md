@@ -116,21 +116,23 @@ An interactive **Tableau Dashboard** is under development to showcase:
 ## 7. Act: Insights and Future Improvements  
 
 ### Key Insights:  
-1. **Smoking** remains a major driver of medical costs, highlighting the need for smoking cessation programs.  
-2. Individuals in **High-risk groups** consistently have higher average charges, emphasizing the need for targeted interventions.  
-3. Using categorical features like `BMI_category` and `Risk_group` simplifies understanding of medical cost patterns.  
+1. **Smoking** is a significant factor contributing to higher medical costs, emphasizing the need for robust tobacco control initiatives and smoking cessation programs.
+2. High-risk individuals consistently incur higher medical charges, highlighting the importance of targeted interventions and preventive care strategies.
+3. Categorical features like `BMI category` and `Risk group` provide valuable insights into medical cost patterns, simplifying model interpretation and enabling more actionable insights.
 
 ### Future Directions:  
-1. **Feature Expansion**: Including additional demographic or medical data for improved accuracy.  
+1. **Feature Expansion**: Incorporate additional relevant features, such as family history, lifestyle factors, and socioeconomic status, to enhance model accuracy and predictive power.
+Explore advanced feature engineering techniques, such as feature interaction and transformation, to capture complex relationships within the data.
 2. **Model Improvement**:  
    - Experiment with advanced algorithms like **XGBoost** or **Neural Networks**.  
    - Optimize existing models using hyperparameter tuning.  
-3. **Dashboard Refinement**: Enhance visualizations to improve user interaction and insights delivery.  
+3. **Dashboard Refinement**: Enhance visualizations to improve user interaction and insights delivery.
 
 ---
 
 ## 8. Project Resources  
 
 - **Dataset**: [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset)  
-- **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)  
+- **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)
+- **Tableau Dashboard**: [Interactive Tableau Dashboard] (https://public.tableau.com/views/PredictiveMedicalCost/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 - **Full Documentation**: *(GitHub Repository link to be added)*  
