@@ -80,6 +80,11 @@ Key Findings from EDA:
 3. **High-risk groups**, as defined by the risk group feature, represent the highest average medical charges.  
 
 Key Libraries: `ggplot2`, `dplyr`, `tidyr`.  
+![age_distribution](https://github.com/user-attachments/assets/b71fd285-d8ea-4775-9733-e906ad4594f0)
+![bmi_vs_charges](https://github.com/user-attachments/assets/2579398a-ab8e-4246-87f7-9d8fa16f5a52)
+![region_distribution](https://github.com/user-attachments/assets/86e667c2-a1fb-4914-aa56-7617791a6e9e)
+![risk_group_distribution](https://github.com/user-attachments/assets/24c738f9-4473-42be-b693-6a239f90ab22)
+![smoker_vs_charges](https://github.com/user-attachments/assets/fc67da34-69b4-4fbd-9af1-7bb4225dfa31)
 
 ---
 
@@ -101,6 +106,8 @@ Two models were trained to predict medical costs based on the identified feature
 ### Key Takeaways:  
 - Both models performed comparably, with **Linear Regression** slightly outperforming Random Forest in R-squared.  
 - **Smoker_binary**, **BMI_category**, and **Risk_group** were identified as the most significant predictors of higher medical costs.  
+![predictive model](https://github.com/user-attachments/assets/7659bec1-71b1-429c-9f2f-fa777e39694a)
+![BMI vs Charges by Risk Group](https://github.com/user-attachments/assets/bc4b9230-6b28-4190-8d33-1a8c5b0b4c22)
 
 ---
 
@@ -110,7 +117,8 @@ An interactive **Tableau Dashboard** is under development to showcase:
 - Predictions and model evaluation metrics.  
 - Key feature importance, including derived categories like `Risk_group` and `BMI_category`.  
 - Interactive exploration of medical cost trends based on user-selected features.  
-
+![Dashboard 1 (7)](https://github.com/user-attachments/assets/6e67d2b6-bfbb-4fca-bf67-37dab0b11b03)
+[Interactive Tableau Dashboard](https://public.tableau.com/views/PredictiveMedicalCost/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 ---
 
 ## 7. Act: Insights and Future Improvements  
@@ -134,4 +142,3 @@ Explore advanced feature engineering techniques, such as feature interaction and
 - **Dataset**: [Medical Cost Dataset on Kaggle](https://www.kaggle.com/datasets/nanditapore/medical-cost-dataset)  
 - **Cleaned Data**: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1NdugYX9XfhQvAsvFEc0moZOmKh4HapGuoYj7ko5SS1c/edit?usp=sharing)
 - **Tableau Dashboard**: [Interactive Tableau Dashboard](https://public.tableau.com/views/PredictiveMedicalCost/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-- **Full Documentation**: *GitHub Repository link to be added* 
