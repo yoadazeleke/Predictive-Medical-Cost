@@ -75,9 +75,14 @@ Exploratory analysis was performed to uncover insights and relationships between
 - Visualize the data using histograms, scatterplots, bar charts, and correlation heatmaps.  
 
 Key Findings from EDA:  
-1. Smokers incur **significantly higher medical costs** than non-smokers.  
-2. Individuals categorized as **Obese** have higher average costs than those in lower BMI categories.  
-3. **High-risk groups**, as defined by the risk group feature, represent the highest average medical charges.  
+1. Smokers incur **significantly higher medical costs** than non-smokers.
+   ![smoker_vs_charges](https://github.com/user-attachments/assets/15fed0cb-3ed9-4606-9589-74ccb9c0052b)
+ 
+3. Individuals categorized as **Obese** have higher average costs than those in lower BMI categories.
+   ![bmi_vs_charges](https://github.com/user-attachments/assets/c8c30c17-4bb6-4e2a-9ab6-62fe2deeaa12)
+
+5. **High-risk groups**, as defined by the risk group feature, represent the highest average medical charges.  
+![risk_group_distribution](https://github.com/user-attachments/assets/0be1afd0-656b-462e-bac0-3afce99a7d53)
 
 Key Libraries: `ggplot2`, `dplyr`, `tidyr`.  
 
