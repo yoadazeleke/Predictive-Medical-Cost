@@ -131,7 +131,7 @@ Model Improvement:
 2. Fine-tune models with hyperparameter optimization to improve accuracy.
 
 Dashboard Enhancement:
-Improve interactive visualizations for better user experience and more actionable insights.
+1. Improve interactive visualizations for better user experience and more actionable insights.
 
 ---
 ## 8. Project Resources  
