@@ -117,19 +117,22 @@ An interactive **Tableau Dashboard** is under development to showcase:
 ---
 
 ## 7. Act: Insights and Future Improvements  
+Key Insights:
+1. Smoking is a major contributor to higher medical costs, indicating a strong need for targeted smoking cessation programs.
+2. High-risk individuals consistently face higher medical charges, underscoring the importance of preventive care and personalized interventions.
+3. Categorical features like `BMI category` and `Risk group` offer valuable insights into medical cost patterns, making the model more interpretable and actionable.
+Future Directions:
 
-### Key Insights:  
-1. **Smoking** is a significant factor contributing to higher medical costs, emphasizing the need for robust tobacco control initiatives and smoking cessation programs.
-2. High-risk individuals consistently incur higher medical charges, highlighting the importance of targeted interventions and preventive care strategies.
-3. Categorical features like `BMI category` and `Risk group` provide valuable insights into medical cost patterns, simplifying model interpretation and enabling more actionable insights.
+Feature Expansion:
+1. Include additional features such as family history, lifestyle factors, and socioeconomic status to enhance model accuracy.
+2. Explore advanced feature engineering (e.g., interaction terms, transformations) to uncover more complex data relationships.
 
-### Future Directions:  
-1. **Feature Expansion**: Incorporate additional relevant features, such as family history, lifestyle factors, and socioeconomic status, to enhance model accuracy and predictive power.
-Explore advanced feature engineering techniques, such as feature interaction and transformation, to capture complex relationships within the data.
-2. **Model Improvement**:  
-   - Experiment with advanced algorithms like **XGBoost** or **Neural Networks**.  
-   - Optimize existing models using hyperparameter tuning.  
-3. **Dashboard Refinement**: Enhance visualizations to improve user interaction and insights delivery.
+Model Improvement:
+1. Experiment with advanced algorithms like XGBoost and Neural Networks for better prediction performance.
+2. Fine-tune models with hyperparameter optimization to improve accuracy.
+
+Dashboard Enhancement:
+Improve interactive visualizations for better user experience and more actionable insights.
 
 ---
 ## 8. Project Resources  
